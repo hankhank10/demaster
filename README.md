@@ -8,6 +8,8 @@ Don't even get me started on Simon & Garfunkel's classic "The 59th Street Bridge
 
 So I wrote a script to fix it, which I'm calling demaster. It looks for the nonsense at the end of a song name and strips it right out.
 
+There is an online API which runs this which always has the latest algorithm. If the script can't access that - or if you set it to run in offline-only mode - then it will run some simple amendments locally.
+
 ## Installation
 
 No installations or libraries should be required. Runs on Python3.
