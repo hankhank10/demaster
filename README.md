@@ -8,4 +8,10 @@ Don't even get me started on Simon & Garfunkel's classic "The 59th Street Bridge
 
 So I wrote a script to fix it, which I'm calling demaster. It looks for the nonsense at the end of a song name and strips it right out.
 
+## Installation
+
 No installations or libraries should be required. Runs on Python3.
+
+demaster.py is the script which you can incorporate into your projects.
+
+example.py is an example of how to call it and what it does using a looping command line
