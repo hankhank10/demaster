@@ -4,7 +4,7 @@
 import requests
 
 # application settings
-api_base_url = 'http://hankapi.com:8080/demaster?format=simple&long_track_name='
+api_base_url = 'http://demaster.hankapi.com/demaster?format=simple&long_track_name='
 
 # set user settings
 offline_only_mode = False
@@ -62,14 +62,17 @@ def strip_name_api(full_song_name):
 
 def strip_name(full_song_name, offline_only_mode=False):
     if offline_only_mode == True:
+        # If we are running in offline-only mode then just parse locally
         print ("Just using offline as we are in offline_only_mode")
         return strip_name_offline(full_song_name)
 
-    # Try online API
+    # If not, try online API
     online_api_response = strip_name_api(full_song_name)
     
+    # if there is a connection error, try offline instead
     if online_api_response == "##Error##":
         print ("Online API failed, returning offline version")
         online_api_response = strip_name_offline(full_song_name)
 
+    # return whatever we have generated
     return online_api_response
