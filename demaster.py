@@ -9,7 +9,7 @@ def strip_name(full_song_name):
     offending_text = [
         '- Remast',
         '(Remast',
-        '- Live at',
+        '- Live ',
         '(Live at',
         '- Mono / Remast',
         '- From '
